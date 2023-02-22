@@ -16,6 +16,11 @@ module.exports = {
 			new TerserPlugin({}),
 		]
 	},
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "./")
+  	}
+	},
 	plugins: [
 		new HTMLPlugin({
 			filename: 'index.html',
@@ -30,9 +35,19 @@ module.exports = {
 		rules: 
 		[	
 			{
-			test: /\.css$/,
-			use: [MiniCssExtractPlugin.loader, 'css-loader']
-			}
+				test: /\.css$/,
+				use: [MiniCssExtractPlugin.loader, 'css-loader']
+			},
+			{
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          	loader: "babel-loader",
+          	options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
 		]
 	}
 }
