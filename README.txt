@@ -9,3 +9,4 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env
 npm install -D babel-loader @babel/core @babel/preset-env webpack
 npm install sass-loader sass webpack --save-dev
 npm i -S react-dom
+npm install --save-dev @babel/preset-react
