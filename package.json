@@ -1,0 +1,28 @@
+{
+  "name": "webpack2023",
+  "version": "1.0.0",
+  "description": "webpack2023",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xelarq/webpack2023.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "webpack"
+  ],
+  "author": "Reva Alexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xelarq/webpack2023/issues"
+  },
+  "homepage": "https://github.com/Xelarq/webpack2023#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
