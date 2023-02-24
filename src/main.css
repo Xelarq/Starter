@@ -1,3 +1,92 @@
 @import "./css/reset.css";
 @import "./css/media.css";
 
+html {
+	font-family: 'Noto Serif Tamil', serif;
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	font-size: 30px;
+	background-color: rgba(0, 0, 0, 0.966);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	background-attachment: fixed;
+}
+
+.wrapper {
+}
+.content {
+	width: 90%;
+	margin: 0 auto;
+}
+.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar ul {
+	display: flex;
+}
+.navbar li+li {
+	margin-left: 20px;
+}
+.header {
+	width: 100%;
+	height:100vh;
+}
+.header-text-wrapper{
+	display: flex;
+	width: 70%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.header-text-wrapper h1 {
+	font-size: 2rem;
+}
+.header-text-wrapper article {
+	margin-top: 30px;
+}
+.columns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto;
+
+}
+.first-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.first-column-text {
+}
+.first-column-img-wrapper {
+}
+.second-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 50px;
+}
+.second-column-text {
+}
+.second-column-img-wrapper {
+}
+.third-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 50px;
+
+}
+.third-column-text {
+}
+.third-column-img-wrapper {
+}
+.slider {
+}
+.img-wrapper {
+}
