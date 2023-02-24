@@ -202,7 +202,7 @@ html {
 }
 .content {
 	width: 90%;
-	margin: 50px auto;
+	margin: 0 auto;
 }
 .navbar {
 	display: flex;
@@ -216,7 +216,22 @@ html {
 	margin-left: 20px;
 }
 .header {
-	margin: 50px auto;
+	width: 100%;
+	height:100vh;
+}
+.header-text-wrapper{
+	display: flex;
+	width: 70%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.header-text-wrapper h1 {
+	font-size: 2rem;
+}
+.header-text-wrapper article {
+	margin-top: 30px;
 }
 .columns {
 	display: flex;
