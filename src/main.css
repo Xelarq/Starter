@@ -11,7 +11,7 @@ html {
   font-family: "Roboto", sans-serif;
   color: white;
   font-size: var(--main-font-size);
-  background-color: rgba(0, 0, 0, 0.966);
+  background-color: rgba(22, 9, 9, 0.966);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -33,9 +33,26 @@ html {
 }
 .navbar ul {
   display: flex;
+	column-gap: 20px;
+
 }
-.navbar li + li {
-  margin-left: 20px;
+.navbar li {
+	background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, rgba(63,94,251,1), rgba(252,70,107,1));
+	background-size: 100% 3px, 0 1px;
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size .3s;
+}
+.navbar li:hover {
+	background-size: 0 3px, 100% 1px;
+}
+.navbar li a {
+	transition: .3s;
+}
+.navbar li a:hover {
+	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .header {
   width: 100%;
