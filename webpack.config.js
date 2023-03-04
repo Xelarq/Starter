@@ -4,11 +4,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
+
 module.exports = {
 	entry: './src/main.js',
 	output: {
-		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		clean: true,
+		filename: '[name].js',
+		assetModuleFilename: 'assets/images/[name][ext]',
 	},
 	optimization: {
 		minimizer: [
@@ -28,13 +31,13 @@ module.exports = {
 			
 		}),
 		new MiniCssExtractPlugin({
-			filename: "style.css"
+			filename: "styles.css"
 		})
 	],
 	module: {
 		rules: 
 		[	
-			{
+      {
 				test: /\.css$/,
 				use: [MiniCssExtractPlugin.loader, 'css-loader']
 			},
@@ -43,6 +46,20 @@ module.exports = {
 				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
 
 			},
+			{
+				test: /\.(png|jpg|gif|svg)$/,
+				type: 'asset/resource',
+				generator: {
+					filename: 'assets/images/[name][ext]'
+				}
+			 },
+			{
+				test: /\.(ttf|woff|woff2)$/,
+				type: 'asset/resource',
+				generator: {
+					filename: 'assets/fonts/[name][ext]'
+				}
+			 },
 			{
         test: /\.m?js$/,
         exclude: /node_modules/,
