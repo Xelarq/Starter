@@ -17,7 +17,24 @@
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
-
+	.navbar {
+		justify-content: center;
+	}
+	.nav__logo {
+		display: none;
+	}
+	.navbar ul{
+		display: none;
+	}
+	.navbar .nav__login-btn {
+		display: none;
+	}
+	.navbar .nav__signin-btn {
+		display: none;
+	}
+	.mobile__nav-burger-btn {
+		display: flex;
+	}
 }
 
 /* xs <= Small (sm) */
